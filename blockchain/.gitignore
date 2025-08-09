@@ -1,0 +1,12 @@
+# Hardhat
+/artifacts
+/cache
+/coverage
+coverage.json
+/typechain-types
+
+# Env
+.env
+
+# Logs
+*.log
