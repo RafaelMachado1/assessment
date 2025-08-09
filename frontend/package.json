@@ -22,6 +22,7 @@
     "@mui/lab": "^6.0.0-beta.10",
     "@mui/material": "^6.1.1",
     "@mui/x-date-pickers": "^7.18.0",
+    "@rainbow-me/rainbowkit": "^2.2.8",
     "@reduxjs/toolkit": "^2.2.5",
     "@types/redux-persist": "^4.3.1",
     "date-fns": "^3.6.0",
@@ -37,6 +38,8 @@
     "react-toastify": "^10.0.5",
     "redux-persist": "^6.0.0",
     "slick-carousel": "^1.8.1",
+    "viem": "^2.33.3",
+    "wagmi": "^2.16.2",
     "zod": "^3.23.8"
   },
   "devDependencies": {
