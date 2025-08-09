@@ -18,6 +18,7 @@ import { FetchBaseQueryError } from '@reduxjs/toolkit/query';
 import { SerializedError } from '@reduxjs/toolkit';
 import { toast } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 import { getErrorMsg } from '@/utils/helpers/get-error-message';
 import { useLogoutMutation } from '@/domains/auth/api';
@@ -77,6 +78,9 @@ export const AppBarLayout: React.FC<AppBarLayoutProps> = ({
           <MenuBook />
         </IconButton>
         <Box sx={{ flexGrow: 1 }}></Box>
+        <Box sx={{ mr: 2 }}>
+          <ConnectButton />
+        </Box>
         <Button
           sx={{ color: 'black' }}
           size='large'
