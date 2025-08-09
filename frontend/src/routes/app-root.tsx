@@ -22,6 +22,15 @@ export const AppRoot = () => {
   if (isError) return <PermissionErrorLayout error={errorMessage} />;
   if (!hasData) return <PermissionErrorLayout error='No permission data available' />;
 
+  // A rota de certificados é pública e não precisa de verificação de permissão do backend.
+  if (currentPath === 'certificates/issue') {
+    return (
+      <MainLayout>
+        <Outlet />
+      </MainLayout>
+    );
+  }
+
   const isRouteAvailable = doesRouteExist(currentPath);
   return <MainLayout>{isRouteAvailable ? <Outlet /> : <NotFound />}</MainLayout>;
 };
