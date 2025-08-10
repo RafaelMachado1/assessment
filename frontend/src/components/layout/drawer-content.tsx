@@ -38,6 +38,7 @@ export const DrawerContent: React.FC<DrawerContentProps> = ({
       </Toolbar>
       <Divider />
       <List component='nav' sx={{ width: '100%' }}>
+        {/* Menu Dinâmico da API */}
         {menus &&
           menus.map(({ name, path, subMenus, icon }) => {
             if (Array.isArray(subMenus) && subMenus.length > 0) {
@@ -77,6 +78,14 @@ export const DrawerContent: React.FC<DrawerContentProps> = ({
               );
             }
           })}
+
+        {/* Menu Estático para Desenvolvimento - Simplificado para Teste */}
+        <ListItemButton component={Link} to='/app/certificates/issue'>
+          <ListItemIcon>
+            <AcUnitOutlined />
+          </ListItemIcon>
+          <ListItemText primary='Emitir Certificado' />
+        </ListItemButton>
       </List>
     </div>
   );
